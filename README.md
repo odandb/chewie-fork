@@ -1,4 +1,7 @@
-# chewie
+# chewie Fork
+
+Ce projet a été forké pour octomap afin de supprimer toutes les actions de rotation d'écran par le package qui posaient des problèmes en mode plein écran.
+
 [![Version](https://img.shields.io/pub/v/chewie.svg)](https://pub.dev/packages/chewie)
 ![CI](https://github.com/brianegan/chewie/workflows/CI/badge.svg)
 [![Generic badge](https://img.shields.io/badge/platform-android%20|%20ios%20|%20web%20-blue.svg)](https://pub.dev/packages/chewie)
