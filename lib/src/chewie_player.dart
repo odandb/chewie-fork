@@ -176,9 +176,9 @@ class ChewieState extends State<Chewie> {
       SystemUiMode.manual,
       overlays: widget.controller.systemOverlaysAfterFullScreen,
     );
-    SystemChrome.setPreferredOrientations(
-      widget.controller.deviceOrientationsAfterFullScreen,
-    );
+    // SystemChrome.setPreferredOrientations(
+    //   widget.controller.deviceOrientationsAfterFullScreen,
+    // );
   }
 
   void onEnterFullScreen() {
@@ -201,9 +201,9 @@ class ChewieState extends State<Chewie> {
 
     if (widget.controller.deviceOrientationsOnEnterFullScreen != null) {
       /// Optional user preferred settings
-      SystemChrome.setPreferredOrientations(
-        widget.controller.deviceOrientationsOnEnterFullScreen!,
-      );
+      // SystemChrome.setPreferredOrientations(
+      //   widget.controller.deviceOrientationsOnEnterFullScreen!,
+      // );
     } else {
       final isLandscapeVideo = videoWidth > videoHeight;
       final isPortraitVideo = videoWidth < videoHeight;
@@ -211,23 +211,23 @@ class ChewieState extends State<Chewie> {
       /// Default behavior
       /// Video w > h means we force landscape
       if (isLandscapeVideo) {
-        SystemChrome.setPreferredOrientations([
-          DeviceOrientation.landscapeLeft,
-          DeviceOrientation.landscapeRight,
-        ]);
+        // SystemChrome.setPreferredOrientations([
+        //   DeviceOrientation.landscapeLeft,
+        //   DeviceOrientation.landscapeRight,
+        // ]);
       }
 
       /// Video h > w means we force portrait
       else if (isPortraitVideo) {
-        SystemChrome.setPreferredOrientations([
-          DeviceOrientation.portraitUp,
-          DeviceOrientation.portraitDown,
-        ]);
+        // SystemChrome.setPreferredOrientations([
+        //   DeviceOrientation.portraitUp,
+        //   DeviceOrientation.portraitDown,
+        // ]);
       }
 
       /// Otherwise if h == w (square video)
       else {
-        SystemChrome.setPreferredOrientations(DeviceOrientation.values);
+        // SystemChrome.setPreferredOrientations(DeviceOrientation.values);
       }
     }
   }
@@ -337,7 +337,8 @@ class ChewieController extends ChangeNotifier {
       Animation<double>,
       Animation<double>,
       ChewieControllerProvider,
-    )? routePageBuilder,
+    )?
+        routePageBuilder,
   }) {
     return ChewieController(
       draggableProgressBar: draggableProgressBar ?? this.draggableProgressBar,
